@@ -8,12 +8,25 @@ body {
   font-family: "Roboto" sans-serif;
   margin: 0;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  overflow-x: hidden;
+  background-color: #081f37;
+  color: #081f37;
 }
 
-.picture {
-  border: 1px solid #000;
+img {
+  width: 450px;
+}
+
+.container {
+  background-color: #5fc9f3;
+  transform-origin: top left;
+  width: 100vw;
+  min-height: 100vh;
+  transition: transform 0.5s linear;
+  padding: 50px;
+}
+
+.container.show-nav {
+  transform: rotate(-15deg);
 }
