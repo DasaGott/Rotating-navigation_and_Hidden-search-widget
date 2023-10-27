@@ -153,3 +153,22 @@ nav ul li i {
   transform: translateX(0);
   transition-delay: 0.3s;
 }
+
+#search {
+  border-radius: 5px;
+  border: transparent;
+  background-color: #d3d6db;
+  color: #081f37;
+  padding: 5px 8px;
+  font-family: sans-serif;
+  letter-spacing: 0.1em;
+  width: 0%;
+}
+
+#search:focus {
+  outline: none;
+}
+
+#search-button:hover {
+  cursor: pointer;
+}
