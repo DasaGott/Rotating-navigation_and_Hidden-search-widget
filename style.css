@@ -30,3 +30,39 @@ img {
 .container.show-nav {
   transform: rotate(-15deg);
 }
+
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+
+.circle {
+  background-color: #7c73e6;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.5s ease-in;
+}
+
+.circle button {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  height: 80px;
+  background: transparent;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.circle button#open {
+  left: 60%;
+}
+
+.circle button#close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
