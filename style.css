@@ -15,7 +15,7 @@ body {
 }
 
 img {
-  width: 600px;
+  max-width: 100%;
   display: block;
   margin: 0 auto;
 }
@@ -26,11 +26,11 @@ img {
   width: 100vw;
   min-height: 100vh;
   transition: transform 0.5s linear;
-  padding: 50px;
+  padding: 30px;
 }
 
 .container.show-nav {
-  transform: rotate(-15deg);
+  transform: rotate(-30deg);
 }
 
 .circle-container {
@@ -41,11 +41,15 @@ img {
 
 .circle {
   background-color: #7c73e6;
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   position: relative;
   transition: transform 0.5s ease-in;
+}
+
+.container.show-nav .circle {
+  transform: rotate(-60deg);
 }
 
 .circle button {
@@ -65,17 +69,19 @@ img {
 
 .circle button#close {
   top: 60%;
+  left: 50%;
   transform: rotate(90deg);
   transform-origin: top left;
 }
 
 .content {
   max-width: 1000px;
-  margin: 50px auto;
+  margin: 60px auto;
 }
 
 .content h1 {
   margin: 0;
+  padding-top: 10px;
   font-size: 30px;
 }
 
@@ -115,4 +121,35 @@ a.buy:hover {
   color: #000;
   font-size: 17px;
   cursor: auto;
+}
+
+nav {
+  position: fixed;
+  bottom: 0px;
+  left: -25px;
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 30px;
+  margin-left: 20px;
+}
+
+nav ul li {
+  text-transform: uppercase;
+  margin: 10px 0;
+  color: #fff;
+  transform: translateX(-120%);
+  transition: transform 0.5s linear;
+}
+
+nav ul li i {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+.container.show-nav + nav li {
+  transform: translateX(0);
+  transition-delay: 0.3s;
 }
